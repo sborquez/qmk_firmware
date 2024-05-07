@@ -1,0 +1,9 @@
+MOUSEKEY_ENABLE = no    # Mouse keys
+RGBLIGHT_ENABLE = no    # Enable WS2812 RGB underlight.
+OLED_ENABLE     = yes
+OLED_DRIVER     = ssd1306
+LTO_ENABLE      = yes
+CONSOLE_ENABLE  = no
+COMMANDS_ENABLE = no
+EXTRAFLAGS += -flto
+SWAP_HANDS_ENABLE = no
