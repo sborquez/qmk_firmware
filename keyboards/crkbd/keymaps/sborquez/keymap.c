@@ -26,7 +26,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
 ALT_T(KC_ESC),    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    KC_O,   KC_P,  KC_LGUI,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-ALT_T(KC_TAB),    KC_A,    KC_S,    KC_D,LT(1, KC_F), KC_G,                         KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN,   TG(1),
+       KC_TAB,    KC_A,    KC_S,    KC_D,LT(1, KC_F), KC_G,                         KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN,   TG(1),
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
        KC_BSPC,   KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,   KC_DEL,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
@@ -60,13 +60,13 @@ ALT_T(KC_ESC),    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                     
   // VSCode Shortcuts  and F keys
   [3] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      TG(4),   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                        KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,  
+      TO(4),   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                        KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,  
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      TG(5), KC_MPRV, KC_MSTP, KC_MPLY, KC_MNXT, XXXXXXX,                         XXXXXXX, S(KC_PSCR), XXXXXXX, XXXXXXX, XXXXXXX, KC_F12,
+      TO(5), KC_MPRV, KC_MSTP, KC_MPLY, KC_MNXT, XXXXXXX,                         XXXXXXX, S(KC_PSCR), XXXXXXX, XXXXXXX, XXXXXXX, KC_F12,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      TG(6), KC_VOLD, KC_MUTE, KC_VOLU, XXXXXXX, XXXXXXX,                      XXXXXXX, KC_PSCR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+      TO(6), KC_VOLD, KC_MUTE, KC_VOLU, XXXXXXX, XXXXXXX,                      XXXXXXX, KC_PSCR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LCTL,  KC_LALT, KC_LSFT,    XXXXXXX, TG(8), _______
+                                          KC_LCTL,  KC_LALT, KC_LSFT,    XXXXXXX, TO(8), _______
                                       //`--------------------------'  `--------------------------'
   ),
   // RGB
@@ -122,49 +122,49 @@ ALT_T(KC_ESC),    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                     
   // Writing 
   [8] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-ALT_T(KC_ESC),    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    KC_O,   KC_P,  KC_LGUI,
+OPT_T(KC_ESC),    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    KC_O,   KC_P,LCMD(KC_SPC),
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-ALT_T(KC_TAB),    KC_A,    KC_S,    KC_D,LT(9, KC_F), KC_G,                         KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN,   TG(1),
+       KC_TAB,    KC_A,    KC_S,    KC_D,LT(9, KC_F), KC_G,                         KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN,   TG(9),
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
        KC_BSPC,   KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,   KC_DEL,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                    KC_LCTL, LT(10, KC_SPC),  KC_LSFT,  KC_RALT, KC_ENT, LT(11, KC_LCAP)
+                                    KC_LCMD, LT(10, KC_SPC),  KC_LSFT,  LOPT(KC_E), KC_ENT, LT(11, KC_LCAP)
                                       //`--------------------------'  `--------------------------'
   ),
-  // Navigation windows
+  // Navigation´
   [9] = LAYOUT_split_3x6_3(
    //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-ALT_T(KC_ESC),XXXXXXX,S(KC_LALT),S(KC_LCTL),XXXXXXX,XXXXXXX,                     XXXXXXX, KC_HOME, KC_PGUP, KC_PGDN,  KC_END, XXXXXXX,
+OPT_T(KC_ESC),XXXXXXX,XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, KC_HOME, KC_PGUP, KC_PGDN,  KC_END, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_TAB, KC_LGUI, KC_LALT, KC_LCTL,  _______, XXXXXXX,                        KC_APP, KC_LEFT,   KC_UP, KC_DOWN,KC_RIGHT,   TG(1),
+      KC_TAB, KC_LCTL, KC_LOPT, KC_LOPT,  _______, XXXXXXX,                       KC_BTN2, KC_LEFT,   KC_UP, KC_DOWN,KC_RIGHT,   TG(9),
   //|--------+--------+--------+--------+--------+--------|                     |--------+--------+--------+--------+--------+--------|
-      KC_BSPC, XXXXXXX, C(KC_LALT), C(KC_LALT), XXXXXXX, XXXXXXX,                 KC_TAB,LCTL(KC_C),LCTL(KC_X),XXXXXXX,XXXXXXX,KC_DEL,
+      KC_BSPC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                    KC_MCTL,LCMD(KC_C),LCMD(KC_X),XXXXXXX,XXXXXXX,KC_DEL,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                        KC_LCTL, KC_SPC,KC_LSFT,    LCTL(KC_V), KC_ENT, XXXXXXX
+                                        KC_LCMD, KC_SPC,KC_LSFT,    LCMD(KC_V), KC_ENT, XXXXXXX
                                       //`--------------------------'  `--------------------------'
   ),
-  // Symbols windows
+  // Symbols
   [10] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-ALT_T(KC_ESC),    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                         KC_6,    KC_7,    KC_8,    KC_9,    KC_0, XXXXXXX,
+OPT_T(KC_ESC),  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                       KC_6,    KC_7,    KC_8,    KC_9,    KC_0, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LSFT, KC_BSLS, KC_SLSH, KC_MINS,  KC_EQL, KC_GRV,                      KC_QUOT, KC_LPRN, KC_LBRC, KC_LCBR,   KC_LT, XXXXXXX,
+      KC_LSFT, KC_BSLS, KC_SLSH, KC_MINS,  KC_EQL, KC_GRV,                       KC_QUOT, KC_LPRN, KC_LBRC, KC_LCBR,   KC_LT, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX, KC_PIPE, KC_QUES, KC_UNDS, KC_PLUS, KC_TILD,                      KC_DQUO, KC_RPRN, KC_RBRC, KC_RCBR,   KC_GT, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           XXXXXXX, _______, XXXXXXX,    XXXXXXX, KC_LSFT, XXXXXXX
                                       //`--------------------------'  `--------------------------'
   ),
-  // VSCode Shortcuts  and F keys windows
+  // VSCode Shortcuts  and Fn shortcuts
   [11] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       XXXXXXX,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                        KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,  
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, KC_MPRV, KC_MSTP, KC_MPLY, KC_MNXT, XXXXXXX,                         XXXXXXX, S(KC_PSCR), XXXXXXX, XXXXXXX, XXXXXXX, KC_F12,
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, SCMD(KC_5), KC_BRIU, KC_BRID, XXXXXXX, KC_F12,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, KC_VOLD, KC_MUTE, KC_VOLU, XXXXXXX, XXXXXXX,                      XXXXXXX, KC_PSCR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+      XXXXXXX, KC_KB_VOLUME_DOWN, KC_KB_MUTE, KC_KB_VOLUME_UP, XXXXXXX, XXXXXXX, XXXXXXX, SCMD(KC_3), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LCTL,  KC_LALT, KC_LSFT,    XXXXXXX, TG(0), _______
+                                          KC_LCMD,  KC_LOPT, KC_LSFT,    XXXXXXX, TG(8), _______
                                       //`--------------------------'  `--------------------------'
   )
 };
@@ -180,44 +180,81 @@ oled_rotation_t oled_init_user(oled_rotation_t rotation) {
   return rotation;
 }
 
-#define L_BASE 0
-#define L_SYM 4
-#define L_NAVI 2
-#define L_CMD 8
-#define L_ADJUST 16
+#define L_BASE1 0
+#define L_NAVI1 2
+#define L_SYM1 4
+#define L_CMD1 8
+#define L_RGB 16
 #define L_APP_1 32
 #define L_APP_2 64
 #define L_APP_2_MOD 128
+#define L_BASE2 256
+#define L_NAVI2 512
+#define L_SYM2 1024
+#define L_CMD2 2048 
+
 
 void oled_render_layer_state(void) {
-    oled_write_P(PSTR("Layer: "), false);
+    static const char PROGMEM ms_logo[] = {
+        151,152,10,
+        183,184,0
+    };
+    static const char PROGMEM osx_logo[] = {
+        149,150,10,
+        181,182,0
+    };
+
     switch (layer_state) {
-        case L_BASE:
-            oled_write_ln_P(PSTR("[MS] Typing"), false);
+        case L_BASE1:
+            oled_write_ln_P(ms_logo, false);
+            oled_write_ln_P(PSTR("Typing"), false);
             break;
-        case L_SYM:
-            oled_write_ln_P(PSTR("[MS] Symbols"), false);
+        case L_BASE1|L_SYM1:
+            oled_write_ln_P(ms_logo, false);
+            oled_write_ln_P(PSTR("Symbols"), false);
             break;
-        case L_NAVI:
-            oled_write_ln_P(PSTR("[MS] Navy"), false);
+        case L_BASE1|L_NAVI1:
+            oled_write_ln_P(ms_logo, false);
+            oled_write_ln_P(PSTR("Navy"), false);
             break;
-        case L_CMD:
-        case L_SYM|L_CMD:
+        case L_BASE1|L_CMD1:
+        //case L_SYM|L_CMD:
+            oled_write_ln_P(ms_logo, false);
             oled_write_ln_P(PSTR("CMD"), false);
             break;
-        case L_ADJUST:
-        case L_ADJUST|L_NAVI:
+        case L_RGB:
+        //case L_ADJUST|L_NAVI:
+            oled_write_ln_P(ms_logo, false);
             oled_write_ln_P(PSTR("RGB"), false);
             break;
         case L_APP_1:
-        case L_ADJUST|L_APP_1:
+        //case L_ADJUST|L_APP_1:
+            oled_write_ln_P(ms_logo, false);
             oled_write_ln_P(PSTR("LOL"), false);
             break;
         case L_APP_2:
-        case L_ADJUST|L_APP_2:
-        case L_APP_2_MOD:
-        case L_APP_2_MOD|L_APP_2:
+            oled_write_ln_P(ms_logo, false);
             oled_write_ln_P(PSTR("RTS"), false);
+            break;
+        case L_BASE2:
+            oled_write_ln_P(osx_logo, false);
+            oled_write_ln_P(PSTR("Typing"), false);
+            break;
+        case L_BASE2|L_SYM2:
+            oled_write_ln_P(osx_logo, false);
+            oled_write_ln_P(PSTR("Symbols"), false);
+            break;
+        case L_BASE2|L_NAVI2:
+            oled_write_ln_P(osx_logo, false);
+            oled_write_ln_P(PSTR("Navy"), false);
+            break;
+        case L_BASE2|L_CMD2:
+            oled_write_ln_P(osx_logo, false);
+            oled_write_ln_P(PSTR("CMD"), false);
+            break;
+        default:
+            oled_write_P(PSTR("Layer: "), false);
+            oled_write_ln_P(PSTR("Unknown"), false);
             break;
     }
 }
