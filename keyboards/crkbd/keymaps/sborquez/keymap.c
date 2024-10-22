@@ -60,9 +60,9 @@ ALT_T(KC_ESC),    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                     
   // VSCode Shortcuts  and F keys
   [3] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      TO(4),   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                        KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,  
+      TO(4),   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                        KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      TO(5), XXXXXXX, XXXXXXX, KC_MPLY, TG(1),     XXXXXXX,                      XXXXXXX,S(KC_PSCR),XXXXXXX,XXXXXXX, XXXXXXX,  KC_F12,
+      TO(5), LCTL(KC_MINS), XXXXXXX, LCTL(KC_PLUS), TG(1),XXXXXXX,               XXXXXXX,S(KC_PSCR),XXXXXXX,XXXXXXX, XXXXXXX,  KC_F12,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       TO(6), KC_VOLD, KC_MUTE, KC_VOLU, XXXXXXX, XXXXXXX,                      XXXXXXX, KC_PSCR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
@@ -104,7 +104,7 @@ ALT_T(KC_ESC),    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                     
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           KC_LCTL, LT(7, KC_SPC),  KC_LSFT,      TG(6),   TG(6),    TG(6)
                                       //`--------------------------'  `--------------------------'
-  ), 
+  ),
   // RTS 2
   [7] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
@@ -119,7 +119,7 @@ ALT_T(KC_ESC),    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                     
   ),
 
   // MacOS Layouts
-  // Writing 
+  // Writing
   [8] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
 OPT_T(KC_ESC),    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    KC_O,   KC_P,LCMD(KC_SPC),
@@ -158,9 +158,9 @@ OPT_T(KC_ESC),  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                       
   // VSCode Shortcuts  and Fn shortcuts
   [11] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      XXXXXXX,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                        KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,  
+      XXXXXXX,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                        KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, TG(9), XXXXXXX,                      XXXXXXX, SCMD(KC_5), KC_BRIU, KC_BRID, XXXXXXX, KC_F12,
+      XXXXXXX, LCMD(KC_MINS), XXXXXXX, LCMD(KC_PLUS), TG(9), XXXXXXX,                      XXXXXXX, SCMD(KC_5), KC_BRIU, KC_BRID, XXXXXXX, KC_F12,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX, KC_KB_VOLUME_DOWN, KC_KB_MUTE, KC_KB_VOLUME_UP, XXXXXXX, XXXXXXX, XXXXXXX, SCMD(KC_3), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
@@ -191,7 +191,7 @@ oled_rotation_t oled_init_user(oled_rotation_t rotation) {
 #define L_BASE2 256
 #define L_NAVI2 512
 #define L_SYM2 1024
-#define L_CMD2 2048 
+#define L_CMD2 2048
 
 
 void oled_render_layer_state(void) {
@@ -313,4 +313,3 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   return true;
 }
 #endif // OLED_ENABLE
-  
