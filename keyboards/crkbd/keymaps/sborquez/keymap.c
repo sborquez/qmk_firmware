@@ -62,7 +62,7 @@ ALT_T(KC_ESC),    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                     
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       TO(4),   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                        KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      TO(5), XXXXXXX, XXXXXXX, XXXXXXX, TG(1),XXXXXXX,              S(KC_PSCR), KC_VOLD, LCTL(KC_MINS), LCTL(KC_PLUS), KC_VOLU,  KC_F12,
+      TO(5), XXXXXXX, LCTL(KC_R), XXXXXXX, TG(1),XXXXXXX,              S(KC_PSCR), KC_VOLD, LCTL(KC_MINS), LCTL(KC_PLUS), KC_VOLU,  KC_F12,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       TO(6), XXXXXXX, KC_MUTE, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, KC_PSCR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
@@ -160,7 +160,7 @@ OPT_T(KC_ESC),  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                       
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       XXXXXXX,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                        KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, TG(9), XXXXXXX,            SCMD(KC_5), KC_KB_VOLUME_DOWN, LCMD(KC_MINS), LCMD(KC_PLUS), KC_KB_VOLUME_UP, KC_F12,
+      XXXXXXX, XXXXXXX, LCTL(KC_R), XXXXXXX, TG(9), XXXXXXX,            SCMD(KC_5), KC_KB_VOLUME_DOWN, LCMD(KC_MINS), LCMD(KC_PLUS), KC_KB_VOLUME_UP, KC_F12,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX, XXXXXXX, KC_KB_MUTE, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, SCMD(KC_3), KC_BRIU, KC_BRID, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
