@@ -57,16 +57,16 @@ ALT_T(KC_ESC),    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                     
                                           XXXXXXX, _______, XXXXXXX,    XXXXXXX, KC_LSFT, XXXXXXX
                                       //`--------------------------'  `--------------------------'
   ),
-  // VSCode Shortcuts  and F keys
+  // Shortcuts and F keys
   [3] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       TO(4),   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                        KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      TO(5), LCTL(KC_MINS), XXXXXXX, LCTL(KC_PLUS), TG(1),XXXXXXX,               XXXXXXX,S(KC_PSCR),XXXXXXX,XXXXXXX, XXXXXXX,  KC_F12,
+      TO(5), XXXXXXX, XXXXXXX, XXXXXXX, TG(1),XXXXXXX,              S(KC_PSCR), KC_VOLD, LCTL(KC_MINS), LCTL(KC_PLUS), KC_VOLU,  KC_F12,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      TO(6), KC_VOLD, KC_MUTE, KC_VOLU, XXXXXXX, XXXXXXX,                      XXXXXXX, KC_PSCR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+      TO(6), XXXXXXX, KC_MUTE, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, KC_PSCR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LCTL,  KC_LALT, KC_LSFT,    XXXXXXX, TO(8), _______
+                                          TO(8),  XXXXXXX, XXXXXXX,    XXXXXXX, TO(8), _______
                                       //`--------------------------'  `--------------------------'
   ),
   // RGB
@@ -84,13 +84,13 @@ ALT_T(KC_ESC),    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                     
   // LoL
   [5] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-       KC_ESC,    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                      LCTL(KC_1), LCTL(KC_2), LCTL(KC_3), LCTL(KC_4), LCTL(KC_6), LCTL(KC_X),
+       KC_ESC,    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                      LCTL(KC_1), LCTL(KC_2), LCTL(KC_3), LCTL(KC_4), LCTL(KC_6), KC_U,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
        KC_TAB,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_D,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, LCTL(KC_X),
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_T,LCTL(KC_6),  XXXXXXX, XXXXXXX,    KC_F,    KC_B,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, LCTL(KC_X),
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LCTL,  KC_SPC, KC_LALT,    TG(5), TG(5), TG(5)
+                                          KC_LCTL,  KC_SPC, KC_LALT,    XXXXXXX, XXXXXXX, TG(5)
                                       //`--------------------------'  `--------------------------'
   ),
   // RTS 1
@@ -102,7 +102,7 @@ ALT_T(KC_ESC),    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                     
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
        KC_LALT,   KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,  KC_DEL,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LCTL, LT(7, KC_SPC),  KC_LSFT,      TG(6),   TG(6),    TG(6)
+                                          KC_LCTL, LT(7, KC_SPC),KC_LSFT,      XXXXXXX, XXXXXXX,    TG(6)
                                       //`--------------------------'  `--------------------------'
   ),
   // RTS 2
@@ -131,7 +131,7 @@ OPT_T(KC_ESC),    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                     
                                     KC_LCMD, LT(10, KC_SPC),  KC_LSFT,  LOPT(KC_E), KC_ENT, LT(11, KC_LCAP)
                                       //`--------------------------'  `--------------------------'
   ),
-  // Navigation´
+  // Navigation
   [9] = LAYOUT_split_3x6_3(
    //,-----------------------------------------------------.                   ,-----------------------------------------------------.
 OPT_T(KC_ESC),XXXXXXX,XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, KC_HOME, KC_PGUP, KC_PGDN,  KC_END, XXXXXXX,
@@ -155,16 +155,16 @@ OPT_T(KC_ESC),  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                       
                                           XXXXXXX, _______, XXXXXXX,    XXXXXXX, KC_LSFT, XXXXXXX
                                       //`--------------------------'  `--------------------------'
   ),
-  // VSCode Shortcuts  and Fn shortcuts
+  // Shortcuts and F keys
   [11] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       XXXXXXX,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                        KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, LCMD(KC_MINS), XXXXXXX, LCMD(KC_PLUS), TG(9), XXXXXXX,                      XXXXXXX, SCMD(KC_5), KC_BRIU, KC_BRID, XXXXXXX, KC_F12,
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, TG(9), XXXXXXX,            SCMD(KC_5), KC_KB_VOLUME_DOWN, LCMD(KC_MINS), LCMD(KC_PLUS), KC_KB_VOLUME_UP, KC_F12,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, KC_KB_VOLUME_DOWN, KC_KB_MUTE, KC_KB_VOLUME_UP, XXXXXXX, XXXXXXX, XXXXXXX, SCMD(KC_3), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+      XXXXXXX, XXXXXXX, KC_KB_MUTE, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, SCMD(KC_3), KC_BRIU, KC_BRID, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LCMD,  KC_LOPT, KC_LSFT,    XXXXXXX, TG(8), _______
+                                          TG(8),  XXXXXXX, XXXXXXX,    XXXXXXX, TG(8), _______
                                       //`--------------------------'  `--------------------------'
   )
 };
